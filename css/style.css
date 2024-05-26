@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.left-box {
+    background-image: url("../img/bg-left.png"); /* เปลี่ยน path ให้ถูกต้อง */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปภาพซ้ำ */
+    background-size: 100% 100%; /* เปลี่ยนเป็น 100% 100% */
+
+}
+
+/* Right Box */
+.right-box {
+    background-image: url("../img/bg-right.png"); /* เปลี่ยน path ให้ถูกต้อง */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปภาพซ้ำ */
+    background-size: 100% 100%; /* เปลี่ยนเป็น 100% 100% */
+
+
+}
+
+.top-box{
+    background-image: url("../img/bg-top.png"); /* เปลี่ยน path ให้ถูกต้อง */
+    background-size: cover; /* หรือ contain, หรือขนาดอื่นๆ ตามต้องการ */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปภาพซ้ำ */
+    background-position: center ; /* จัดกึ่งกลางรูป */  
+    background-size: 100% 100%; /* เปลี่ยนเป็น 100% 100% */
+
+}
+.bottom-box{
+    background-image: url("../img/bg-bottom.png"); /* เปลี่ยน path ให้ถูกต้อง */
+    background-size: cover; /* หรือ contain, หรือขนาดอื่นๆ ตามต้องการ */
+    background-repeat: no-repeat; /* ป้องกันไม่ให้รูปภาพซ้ำ */
+    background-position: center top; /* จัดกึ่งกลางรูป */  
+    }
+
+
+    body,
+html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    height: 300%;
+    /* 3 rows: top, center, bottom */
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.slide-row {
+    display: flex;
+    width: 300%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin-left: -2px;
+    flex-direction: column;
+}
+
+.center-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 10;
+    transition: top 0.5s ease-in-out, left 0.5s ease-in-out;
+    border-radius: 30px;
+}
+
+.nav-icon {
+    position: fixed;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    font-size: 2rem;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.top-arrow {
+    top: 10%;
+    left: 50%;
+}
+
+.bottom-arrow {
+    bottom: 10%;
+    left: 50%;
+}
+
+.left-arrow {
+    top: 50%;
+    left: 10%;
+}
+
+.right-arrow {
+    top: 50%;
+    right: 10%;
+}
+
+.topbox{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+}
+.img_profile{
+    border-radius: 50%;
+    width: 200px;
+    background-color: white;
+    height: 200px;
+}
+.topbox_content{
+    width: 20%;
+    height: 400px;
+    background-color: white;
+    margin: 0 auto;
+    border-radius: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_profile {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+.slide-up .img_profile {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.topbox_content {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 4s ease, opacity 1s ease;
+}
+
+.slide-up .topbox_content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+    
+
+
+    
